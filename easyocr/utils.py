@@ -574,6 +574,7 @@ def compute_ratio_and_resize(img,width,height,model_height):
         img = cv2.resize(img,(model_height,int(model_height*ratio)), interpolation=Image.ANTIALIAS)
     else:
         img = cv2.resize(img,(int(model_height*ratio),model_height),interpolation=Image.ANTIALIAS)
+        # img = cv2.resize(img,(int(model_height*ratio),model_height),interpolation=cv2.INTER_LINEAR)
     return img,ratio
 
 
